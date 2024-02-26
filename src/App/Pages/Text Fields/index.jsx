@@ -1,7 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import Navbar from '../../Components/Navbar/index.jsx';
 import Sidebar from '../../Components/Sidebar/index.jsx';
-import MainPage from './Components/MainPage.jsx';
+
 const index = () => {
   return (
     <>
@@ -13,7 +13,7 @@ const index = () => {
             className=' text-center p-0'
             style={{ height: '100vh' }}
           >
-            <Sidebar activeTab='Analytics' />
+            <Sidebar activeTab='TextFields' />
           </Col>
           <Col
             md={10}
@@ -25,8 +25,8 @@ const index = () => {
             </Row>
 
             <Row>
-              <Col md={12}>
-                <MainPage />
+              <Col md={8}>
+                <p className='p-3'>Text Fields</p>
               </Col>
             </Row>
           </Col>
