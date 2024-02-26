@@ -9,6 +9,7 @@ class MainChart extends React.Component {
     super(props);
 
     this.state = {
+      selectedYear: 'Monthly', // Default selected year
       series: [
         {
           data: [21, 22, 10, 28, 16, 21, 13, 30, 24, 10, 24, 12],
@@ -93,10 +94,53 @@ class MainChart extends React.Component {
     };
   }
 
+  handleYearChange = (event) => {
+    const selectedYear = event.target.value;
+    // Here you can fetch data for the selected year and update the series accordingly
+    // For now, let's just set a placeholder data
+    const newData = this.getDummyDataForYear(selectedYear);
+    this.setState({
+      selectedYear,
+      series: [{ data: newData }],
+    });
+  };
+
+  // Placeholder function to get dummy data for the selected year
+  getDummyDataForYear = (selectedYear) => {
+    // You can implement logic here to fetch data for the selected year
+    // For demonstration, let's return random data for each month
+    const randomData = Array.from({ length: 12 }, () => Math.floor(Math.random() * 50));
+    return randomData;
+  };
+
   render() {
     return (
       <div>
         <div id='chart'>
+          <div className='d-flex justify-content-between align-items-center'>
+            <p
+              style={{
+                color: '#1F1F1F',
+                fontSize: '24px',
+                fontWeight: '700',
+              }}
+            >
+              Total Number of sale
+            </p>
+
+            <select
+              className='w-25 p-2  rounded-3 border-0'
+              style={{ backgroundColor: '#F5F5F5', color: '#1F1F1F' }}
+              onChange={this.handleYearChange}
+              value={this.state.selectedYear}
+            >
+              <option value='Monthly'>Monthly</option>
+              <option value='Jan'>Jan</option>
+              <option value='Feb'>Feb</option>
+              <option value='Mar'>Mar</option>
+              <option value='Apr'>April</option>
+            </select>
+          </div>
           <ReactApexChart
             options={this.state.options}
             series={this.state.series}

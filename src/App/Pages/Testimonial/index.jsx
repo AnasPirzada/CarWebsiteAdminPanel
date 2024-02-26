@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
 import Navbar from '../../Components/Navbar/index.jsx';
 import Sidebar from '../../Components/Sidebar/index.jsx';
-import Modal from 'react-bootstrap/Modal';
 const index = () => {
   const [show, setShow] = useState(false);
 
@@ -58,17 +58,23 @@ const index = () => {
                       </p>
 
                       <button
+                        className='d-flex justify-content-center align-items-center'
                         style={{
                           backgroundColor: '#FFFFFF',
                           borderRadius: '8px',
                           border: '0',
                           marginRight: '30px',
-                          padding: '6px, 12px, 6px, 12px',
+                          padding: '6px 12px 6px 12px',
                           color: '#1985D2',
                         }}
                         variant='primary'
                         onClick={handleShow}
                       >
+                        <img
+                          src='/solar_upload-broken.svg'
+                          className='me-2'
+                          alt=''
+                        />
                         Upload
                       </button>
                     </div>
@@ -83,19 +89,26 @@ const index = () => {
                         boxShadow: ' 0px 1px 8px 0px #00000029',
                       }}
                     >
-                      <div className='d-flex'>
+                      <div className='d-flex px-2 py-2'>
                         <div
-                          className='d-flex'
                           style={{
-                            width: '80px',
-                            height: '120px',
-                            backgroundPosition: 'center',
-                            objectFit: 'cover',
+                            width: '120px',
+                            height: '80px',
+                            overflow: 'hidden',
                           }}
                         >
-                          <img src='' alt='userimage' />
+                          <img
+                            src='/Rectangle 3088.png'
+                            alt='userimage'
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'cover',
+                            }}
+                          />
                         </div>
-                        <div className='ms-3'>
+
+                        <div className='ms-5'>
                           <p
                             style={{
                               color: '#030303',
@@ -118,8 +131,8 @@ const index = () => {
                         </div>
                       </div>
 
-                      <div>
-                        <img src='' alt='Delicon' />
+                      <div className='px-3'>
+                        <img src='/mdi_delete (1).svg' alt='Delicon' />
                       </div>
                     </div>
 
@@ -140,19 +153,26 @@ const index = () => {
                         boxShadow: ' 0px 1px 8px 0px #00000029',
                       }}
                     >
-                      <div className='d-flex'>
+                      <div className='d-flex px-2 py-2'>
                         <div
-                          className='d-flex'
                           style={{
-                            width: '80px',
-                            height: '120px',
-                            backgroundPosition: 'center',
-                            objectFit: 'cover',
+                            width: '120px',
+                            height: '80px',
+                            overflow: 'hidden',
                           }}
                         >
-                          <img src='' alt='userimage' />
+                          <img
+                            src='/Rectangle 3088.png'
+                            alt='userimage'
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'cover',
+                            }}
+                          />
                         </div>
-                        <div className='ms-3'>
+
+                        <div className='ms-5'>
                           <p
                             style={{
                               color: '#030303',
@@ -175,8 +195,8 @@ const index = () => {
                         </div>
                       </div>
 
-                      <div>
-                        <img src='' alt='Delicon' />
+                      <div className='px-3'>
+                        <img src='/mdi_delete (1).svg' alt='Delicon' />
                       </div>
                     </div>
                   </div>
@@ -205,7 +225,11 @@ const index = () => {
                   </div>
 
                   <div className='d-flex flex-column justify-content-center align-items-center'>
-                    <img src='' alt='upload icon' />
+                    <img
+                      src='/solar_upload.svg'
+                      className='my-5'
+                      alt='upload icon'
+                    />
                     <p
                       className='mb-3 '
                       style={{
@@ -219,7 +243,7 @@ const index = () => {
                     <Row className='d-flex justify-content-center align-items-center'>
                       <Col lg={12}>
                         <button
-                          className='border-0 w-100 px-5 py-2'
+                          className='border-0 my-3 w-100 px-5 py-2'
                           style={{
                             color: '#FFFFFF',
                             fontSize: '22px',

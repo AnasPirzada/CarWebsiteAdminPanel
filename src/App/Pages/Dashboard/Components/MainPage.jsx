@@ -120,7 +120,9 @@ export const MainPage = () => {
 
       <Row className='my-4'>
         <Col lg={8} className='shadow rounded-3 p-3'>
-          <Chart />
+          <div>
+            <Chart />
+          </div>
         </Col>
         <Col lg={4} className='shadow rounded-3 '></Col>
       </Row>
